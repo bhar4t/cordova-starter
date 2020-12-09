@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1051850824830-d52r2vdoa4dr3dprvhco7fkcpc05n0gd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1051850824830-d52r2vdoa4dr3dprvhco7fkcpc05n0gd</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1051850824830-t507ecvovi9aimp2snnosua5pscjio5f.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCy18t5bl1APqAGxqShHcz_09a04uChVF4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1051850824830</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.react.cordova</string>
+	<key>PROJECT_ID</key>
+	<string>cordova-smilebots</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cordova-smilebots.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1051850824830:ios:db2b1a8a3e21bd8c03cc2f</string>
+</dict>
+</plist>
