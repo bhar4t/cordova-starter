@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1051850824830",
+    "project_id": "cordova-smilebots",
+    "storage_bucket": "cordova-smilebots.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1051850824830:android:ea5564c2323c24b003cc2f",
+        "android_client_info": {
+          "package_name": "com.react.cordova"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1051850824830-t507ecvovi9aimp2snnosua5pscjio5f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.react.cordova",
+            "certificate_hash": "063ff4d02efaf27924833fe34bd8bcdff22c23ff"
+          }
+        },
+        {
+          "client_id": "1051850824830-lsavlq5blgv66talt8or41tao9lb0n6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8qch2X7hqTnqTv3qHbFlx8GtwzmndUK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1051850824830-lsavlq5blgv66talt8or41tao9lb0n6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

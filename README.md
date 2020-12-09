@@ -68,3 +68,18 @@ The solution for this is to add a “homepage” property in package.json as met
 ```
 "homepage": "./"
 ```
+
+---
+
+Basic Plugins:
+
+1.  cordova-plugin-device
+2.  cordova-plugin-firebasex
+
+    The cordova-android@9 platform adds implicit support for AndroidX so (if you haven't already done so) you should update to this platform version:
+
+    `cordova platform rm android && cordova platform add android@latest`
+
+    and enable AndroidX by setting the following preference in your config.xml:
+
+    `<preference name="AndroidXEnabled" value="true" />`
