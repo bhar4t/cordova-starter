@@ -6,7 +6,7 @@ OS:
 
     Linux: Ubuntu 20.04
 
-    Mac:
+    Mac: 10.15.7
 
 ---
 
@@ -20,15 +20,23 @@ Requirements:
 
 > cordova-android@9.0.0
 
-> Gradle 6.4.1
+> cordova-ios@^6.1.0
 
-> cordova requirements
+> Gradle 6.4.1/6.7.1
 
+> cordova requirements 
+  Android
     Requirements check results for android:
     Java JDK: installed 1.8.0
     Android SDK: installed true
     Android target: installed android-30,android-29,android-28
     Gradle: installed /usr/local/gradle/bin/gradle
+
+  iOS
+    Apple macOS: installed darwin
+    Xcode: installed 11.7
+    ios-deploy: installed 1.11.3
+    CocoaPods: installed 1.10.0
 
 ```html
 <!-- Add the following <meta> tags in the <head> of public/index.html. -->
