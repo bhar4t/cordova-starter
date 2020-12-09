@@ -13,6 +13,26 @@ const renderReactDOM = () => {
 }
 
 if (window.cordova) {
+  // FCM
+  console.log(window)
+  if (window.device.platform === "iOS") {
+    window.FirebasePlugin.hasPermission((hasPermission) => {
+      window.FirebasePlugin.getToken((token) => {
+        console.log('FCM Registration ID: ', token);
+        // send to database
+      }, console.error);
+      window.FirebasePlugin.onTokenRefresh((token) => {
+        console.log('FCM Registration ID: ', token);
+        // send to database
+      }, console.error);
+    });
+  } else {
+    window.FirebasePlugin.getToken((token) => {
+      console.log('FCM Registration ID: ', token);
+      // send to database
+    }, console.error);
+  }
+
   document.addEventListener('deviceready', () => {
     renderReactDOM();
   }, false);
