@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+Hybrid App using Cordova
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+OS:
 
-In the project directory, you can run:
+    Linux: Ubuntu 20.04
 
-### `yarn start`
+    Mac:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Requirements:
 
-### `yarn test`
+> Node: v12.18.1
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> NPM: 6.14.9
 
-### `yarn build`
+> Cordova: 10.0.0
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> cordova-android@9.0.0
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Gradle 6.4.1
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> cordova requirements
 
-### `yarn eject`
+    Requirements check results for android:
+    Java JDK: installed 1.8.0
+    Android SDK: installed true
+    Android target: installed android-30,android-29,android-28
+    Gradle: installed /usr/local/gradle/bin/gradle
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```html
+<!-- Add the following <meta> tags in the <head> of public/index.html. -->
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+/>
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<meta
+  name="viewport"
+  content="initial-scale=1, width=device-width, viewport-fit=cover"
+/>
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```html
+<!-- Add the following script tag just before </body> in public/index.html -->
+<script src="cordova.js" type="text/javascript"></script>
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+The index.html file within the build folder has absolute paths for loading the assets (js, css files). Since the HTML file is going to run directly in webview rather than being hosted on a server the assets need to be accessed using a relative path. For e.g. we want
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`<script src=”./foo/bar.js”></script>`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+instead of
 
-### Code Splitting
+`<script src="/foo/bar.js></script>`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+The solution for this is to add a “homepage” property in package.json as metioned below. Adding this would make sure that the assets are fetched using a relative path in the index.html file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+"homepage": "./"
+```

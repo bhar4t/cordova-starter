@@ -1,7 +1,9 @@
 import logo from './logo.svg';
+import { db } from './store';
 import './App.css';
 
 function App() {
+  console.log(db);
   return (
     <div className="App">
       <header className="App-header">
