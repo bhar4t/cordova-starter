@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+console.log('Start App');
+
 const renderReactDOM = () => {
   ReactDOM.render(
     <React.StrictMode>
@@ -34,6 +36,7 @@ if (window.cordova) {
   }
 
   document.addEventListener('deviceready', () => {
+    console.log('Device Ready')
     renderReactDOM();
   }, false);
 } else {
