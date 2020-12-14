@@ -84,6 +84,14 @@ Basic Plugins:
 1.  cordova-plugin-device
 2.  cordova-plugin-firebasex
 
+    After installation this package: make a change in `package.json` as
+
+    ```"cordova-plugin-firebasex": "*",```
+    
+    instead of
+
+    ```"cordova-plugin-firebasex": "^11.6.1",```
+
     The cordova-android@9 platform adds implicit support for AndroidX so (if you haven't already done so) you should update to this platform version:
 
     `cordova platform rm android && cordova platform add android@latest`
@@ -91,3 +99,7 @@ Basic Plugins:
     and enable AndroidX by setting the following preference in your config.xml:
 
     `<preference name="AndroidXEnabled" value="true" />`
+
+    IOS: We can turn enable or disable by removing module in Podflile, like:
+  
+    `# pod 'Firebase/InAppMessaging', '6.33.0'`
